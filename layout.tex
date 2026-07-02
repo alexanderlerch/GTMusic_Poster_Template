@@ -1,0 +1,109 @@
+%=============================================================================
+% GEORGIA TECH COLOR PALETTE
+% =============================================================================
+\definecolor{GTNavyBlue}{HTML}{003057}     % Primary Navy Blue (Pantone 540 C)
+\definecolor{GTOfficialGold}{HTML}{B3A369} % Primary Tech Gold (Pantone 4515 C)
+\definecolor{GTBuzzGold}{HTML}{EAAA00}     % Secondary Buzz Gold (Pantone 124)
+\definecolor{GTGrayMatter}{HTML}{54585A}   % Tertiary Dark Gray (Pantone 425)
+\definecolor{GTPiMile}{HTML}{D6DBD4}       % Tertiary Light Gray (Pantone 427)
+\definecolor{GTDiploma}{HTML}{F9F6E5}      % Tertiary Light Ivory (Pantone 7499)
+\definecolor{GTWhite}{HTML}{FFFFFF}
+
+% =============================================================================
+% BEAMER THEME & LAYOUT CONFIGURATION
+% =============================================================================
+\setbeamercolor{background canvas}{bg=GTWhite} % Keeps background ink-efficient
+\setbeamercolor{structure}{fg=GTNavyBlue}
+
+% Headline / Header Customization (Gold Theme)
+\setbeamercolor{headline}{bg=GTOfficialGold,fg=GTNavyBlue}
+\setbeamercolor{title in headline}{fg=GTNavyBlue}
+\setbeamercolor{author in headline}{fg=GTNavyBlue}
+\setbeamercolor{institute in headline}{fg=GTNavyBlue}
+\setbeamercolor{headline accent}{bg=GTNavyBlue} % Contrasting Navy Strip under Gold
+\setbeamercolor{logo box}{bg=GTWhite,fg=GTNavyBlue}
+
+\setbeamertemplate{headline}{
+  \leavevmode
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \vskip3ex
+    \begin{columns}[c]
+      \begin{column}{0.03\paperwidth}\end{column} % Left Margin
+      
+      % Title Box
+      \begin{column}{0.76\paperwidth}
+        {\usebeamercolor[fg]{title in headline}\vskip1ex
+        \bfseries\huge\inserttitle\par}
+        \vskip2ex
+        {\usebeamercolor[fg]{author in headline}\large\insertauthor\par}
+        \vskip1ex
+        {\usebeamercolor[fg]{institute in headline}\normalsize\insertinstitute\par}
+      \end{column}
+      
+      % Right Logo Box
+      \begin{column}{0.18\paperwidth}
+        \centering
+        \begin{beamercolorbox}[sep=1.5ex,center,wd=\linewidth,rounded=true]{logo box}
+          \vskip1ex
+          {\small\bfseries LAB / DEPT} \par
+          \vskip0.5ex
+          {\tiny LOGO PLACEHOLDER}
+          \vskip1ex
+        \end{beamercolorbox}
+      \end{column}
+      
+      \begin{column}{0.03\paperwidth}\end{column} % Right Margin
+    \end{columns}
+    \vskip3ex
+    % Navy Blue Accent Strip
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1ex]{headline accent}\end{beamercolorbox}
+  \end{beamercolorbox}
+}
+
+% Scientific Content Block Customization
+\setbeamercolor{block title}{bg=GTNavyBlue,fg=GTWhite}
+\setbeamercolor{block body}{bg=GTDiploma,fg=black} 
+\setbeamerfont{block title}{size=\large,series=\bfseries}
+\setbeamerfont{block body}{size=\normalsize}
+
+\setbeamertemplate{block begin}{
+  \vskip2ex
+  \begin{beamercolorbox}[rounded=true,shadow=false,leftskip=1cm,colsep*=0.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \begin{beamercolorbox}[rounded=true,shadow=false,colsep*=0.75ex,sep=1.5ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-0.25ex}{\vskip-0.75ex}\vbox{}%
+    \raggedright \addtolength{\leftskip}{.5em}
+}
+\setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+% Footer Customization
+\setbeamercolor{footline}{bg=GTNavyBlue,fg=GTWhite}
+\setbeamercolor{footline accent}{bg=GTOfficialGold}
+ \setbeamertemplate{footline}{
+   \leavevmode
+   \begin{beamercolorbox}[wd=\paperwidth,ht=0.6ex]{footline accent}\end{beamercolorbox}
+   \begin{beamercolorbox}[wd=\paperwidth,ht=5ex,dp=3ex,leftskip=2cm,rightskip=2cm]{footline}%
+     \usebeamerfont{footline}
+     \texttt{\posteraffiliationlink} \hfill  \posteraffiliation \hfill Contact: \texttt{\postercontactlink}
+   \end{beamercolorbox}
+ }
+
+% Miscellaneous Typography Styling
+\setbeamercolor{item}{fg=GTNavyBlue}
+\setbeamercolor{subitem}{fg=GTOfficialGold}
+\setbeamertemplate{itemize items}[triangle]
+\setbeamercolor{caption name}{fg=GTNavyBlue}
+
+% Flowchart Box Styling
+\setbeamercolor{flowchart node}{bg=GTNavyBlue,fg=GTWhite}
+
+% disable navigation symbols
+\beamertemplatenavigationsymbolsempty
+
+\title{\postertitle}
+\author{\posterauthor}
+\institute{\posteraffiliation}

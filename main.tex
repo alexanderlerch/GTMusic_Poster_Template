@@ -1,0 +1,141 @@
+%=============================================================================
+% LATEX STUFF
+% ============================================================================
+\PassOptionsToPackage{table}{xcolor} % Enables colored tables cleanly
+\documentclass{beamer}
+
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
+\geometry{paperwidth=36in,paperheight=48in}
+
+%=============================================================================
+% OTHER PACKAGES
+% ============================================================================
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs} % Elegant tables
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+%=============================================================================
+% POSTER METADATA
+% ============================================================================
+\def\postertitle {A Robust LaTeX Template Architecture for High-Impact Scientific Posters}
+\def\posterauthor {\textbf{George P. Burdell}, John Doe, and Jane Smith}
+\def\posteraffiliation {Music Informatics Group, Georgia Institute of Technology}
+\def\posteraffiliationlink {\href{https://www.musicinformatics.org}{www.musicinformatics.org}}
+\def\postercontactlink {\href{mailto:your.email@gatech.edu}{your.email@gatech.edu}}
+
+%=============================================================================
+% LAYOUT DEFINITIONS IN SEPARATE FILE
+% ============================================================================
+\input{layout}
+
+% =============================================================================
+% MAIN POSTER CONTENT
+% =============================================================================
+\begin{document}
+\begin{frame}[t]
+    \vspace{-7mm}
+  
+  \begin{columns}[t]
+    % -------------------------------------------------------------------------
+    % LEFT MARGIN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.025\paperwidth}\end{column}
+
+    % -------------------------------------------------------------------------
+    % LEFT COLUMN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.46\paperwidth}
+      \begin{block}{Introduction \& Rationale}
+        This template provides a rigorous translation of the \textbf{Georgia Institute of Technology} brand identity guidelines into a functional, highly readable Beamer landscape format. 
+        \vskip1ex
+        Key visual design components implemented here:
+        \begin{itemize}
+          \item \textbf{Color Inversion:} Utilizing a bold Tech Gold header accented by deep Institute Navy Blue to optimize authority and readability at a distance.
+          \item \textbf{Ink Efficiency:} Minimizing heavy dark backgrounds across large areas to ensure graphics maintain visual focus.
+          \item \textbf{Structural Balance:} Symmetric column alignment providing rapid parsing capability for viewers passing by standard display booths.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{Research Objectives}
+        \begin{enumerate}
+          \item Establish absolute scale parameters for standard 36'' $\times$ 48'' configurations.
+          \item Maintain critical typographic hierarchy ensuring readability from a minimum threshold of \textbf{6 feet away}.
+          \item Eliminate third-party drawing package dependencies (such as TikZ) to drastically improve compilation speeds across all systems.
+        \end{enumerate}
+      \end{block}
+
+      \begin{block}{Materials \& Methodology}
+        The structural architecture separates institutional presentation space into an elegant, dual-column structure. Processing steps are detailed below in a clean, high-contrast operational sequence:
+        \vskip2ex
+
+        \hfill
+        \begin{beamercolorbox}[wd=0.8\linewidth, rounded=true, center, sep=1ex] %[wd=0.95\linewidth, rounded=true, sep=1ex, center]
+        {flowchart node}\textbf{Flow chart box}
+        \end{beamercolorbox}
+        \hfill\hfill%
+        
+        \vskip1ex
+      \end{block}
+    \end{column}
+    
+    % -------------------------------------------------------------------------
+    % MIDDLE SPACER
+    % -------------------------------------------------------------------------
+    \begin{column}{0.025\paperwidth}\end{column}
+    
+    % -------------------------------------------------------------------------
+    % RIGHT COLUMN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.46\paperwidth}
+      \begin{block}{Experimental Results}
+        Performance metrics demonstrate superior rendering efficiency and compliance scores when stacked against legacy publishing tool sets.
+        
+        \vskip2ex
+        \begin{table}
+          \centering
+          \renewcommand{\arraystretch}{1.2}
+          \begin{tabular}{lrc}
+            \rowcolor{GTNavyBlue} \color{GTWhite}\textbf{Framework Mode} & \color{GTWhite}\textbf{Compliance Score} & \color{GTWhite}\textbf{Build Time} \\
+            \textbf{Proposed Beamer Poster} & \textbf{99.8\%} & \textbf{1.2 s} \\
+            Standard WYSIWYG Tool           & 72.1\%          & 15.4 s \\
+            Manual Canvas Layout            & 84.5\%          & 45.0 s \\
+            \bottomrule
+          \end{tabular}
+          \caption{Quantified typesetting performance benchmarks.}
+        \end{table}
+        
+        \vskip2ex
+        \textbf{Key Statistical Trends Observed:}
+        \begin{itemize}
+          \item \textbf{Epochs 1--10:} Initial convergence scales rapidly, moving from an accuracy base of 12.5\% up to 64.8\%.
+          \item \textbf{Epochs 11--50:} Stabilization occurs as the layout reaches a steady state, perfectly matching target guidelines at 99.8\% precision.
+          \item \textbf{Package Load Overhead:} Dropping the graphic engine dependencies decreased macro expansion overhead times by exactly 84\%.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{Conclusions \& Future Directions}
+        \begin{itemize}
+          \item The native integration of official colors dramatically streamlines peer validation workflows.
+          \item Future modules will natively export dynamically tracked QR codes within the text framework to facilitate remote download protocols directly on-site.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{References \& Acknowledgments}
+        \footnotesize
+        1. Georgia Tech Institute Communications Brand Identity Portal, 2026.\\
+        2. Muneeb, U., ''UIC Beamer Poster Layout Suite,'' GitHub Repository.\\
+        \vskip1ex
+        \scriptsize \color{GTGrayMatter}
+        Acknowledgment: This production environment was developed inside the ECE Senior Design and Research ecosystems at Georgia Institute of Technology.
+      \end{block}
+    \end{column}
+    
+    % -------------------------------------------------------------------------
+    % RIGHT MARGIN
+    % -------------------------------------------------------------------------
+    \begin{column}{0.025\paperwidth}\end{column} 
+  \end{columns}
+\end{frame}
+\end{document}
